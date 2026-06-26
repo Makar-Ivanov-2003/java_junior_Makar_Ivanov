@@ -1,0 +1,77 @@
+[Model]
+ModelName = Samsung SCX-4300 Series
+CompanyName = Samsung
+MDL = 4300
+RegKey = SOFTWARE\SPanel
+SmMode = 0
+XeroxCustomMode = 0
+ManagerJobDetectMode = 1
+
+[Language]
+LangKey = SUGE2
+DefaultLang = En
+LangRegKey = Software\SSPrint
+LangRegValue = SMCntCode
+
+[XML]
+IsXML = 0
+DefaultFile = default.xml
+ReceivedFile = received.xml
+DefaultHTML = main.htm
+URL = /SmartPanel/sm.xml
+XMLOrderURL = http://www.samsung.com/printershoppinginfo/sosindex.asp?ModelCode=&TonerCode=
+
+[OPTION]
+IsNetworkSupported = 0
+IsJobMonitior = 0
+IsRCP = 0
+IsTroubleShooting = 1
+IsBlackOnlyMode = 0
+IsForceToCheckJobID = 0
+IsUSBPrintingBit = 0
+IsJobAccount = 0
+IsWaitStatus = 1
+IsShowWaitOption = 0
+IsImprovedSM = 1
+IsSupportPreparing = 0
+TSGType = CHM
+
+[NetworkPort]
+NetworkPort1 = Xerox Network Printer Port,System\CurrentControlSet\Control\Print\Monitors\Xerox Network Printer Port\,IP,IP
+NetworkPort2 = Samsung Network Printer Port,System\CurrentControlSet\Control\Print\Monitors\Samsung Network Printer Port\,IP,IP
+NetworkPort3 = TCPMON.DLL,System\CurrentControlSet\Control\Print\Monitors\Standard TCP/IP Port\Ports\,IPAddress,HostName
+NetworkPort4 = Xerox TCP/IP Port,System\CurrentControlSet\Control\Print\Monitors\Xerox TCP/IP Port\Port Names\,DeviceIP,DeviceIP
+NetworkPort5 = Phaserport,System\CurrentControlSet\Control\Print\Monitors\PhaserPort\,IPAddress,DNS Name
+
+[Toner]
+IsBuyNow = 1
+IsTonerStatus = 1
+TonerLowStatus = SM_TONER_LOW,SM_TONER_EMPTY,SM_TONER_REPLACE
+TonerErrStatus = SM_INVALID_TONER_KIT,SM_TONERKIT_NOTINST
+Color = 0
+NewTonerLevel = 50
+OrderURL = http://www.samsung.com/printershoppinginfo/sosindex.asp
+ModelID = 
+
+[Bar]
+BarInfo1 = 1 0 0 Black 5 0 100 255 TonerK 8
+
+[IO]
+Polling_DefInterval = 3
+IsUSBIOByDeviceMon = 0
+SizeOfBuffer = 255
+
+[DevMon]
+FileName = ;ssdevm.dll
+VID = ;413c
+PID = ;5220
+
+[PSU]
+psuname = PSU\psu.exe
+
+[Image]
+imagename = printer.bmp
+
+[TrayIcon]
+IsFindPosition = 0
+PosValueToIgnoreTray=10000

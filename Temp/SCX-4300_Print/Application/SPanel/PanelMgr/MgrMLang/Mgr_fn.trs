@@ -1,0 +1,43 @@
+[Menu]
+MANUAL=Mode d'emploi
+MGR_OPEN=Smart Panel
+MGR_EXIT=Quitter 
+MGR_SETTING=Options
+MGR_JOBMONITOR=Moniteur des tâches
+MGR_DRV_SETTING=Paramétrage du pilote
+MGR_PRN_SETTING=Paramètres d'imprimante
+MGR_BUYNOW=Acheter maintenant 
+MGR_GUIDE=Guide de dépannage
+MGR_ERR_TOOLTIP=Aucun pilote ni port d'impression n'est pris en charge
+MGR_SCAN_MANAGER=Gestionnaire de numérisation et de télécopie
+
+[Msg]
+OK_BUTTON=OK
+BUSY_ERR_TITLE=Imprimante occupée 
+BUSY_ERR_MSG=La configuration d'imprimante est disponible lorsque l'imprimante est inactive
+FATAL_ERR_TITLE=Erreur
+FATAL_ERR_MSG=Veuillez installer le pilote ou le port pris en charge
+INITIAL_MSG=Veuillez patienter...
+SM_OTHERPORT=Une autre imprimante est déjà surveillée.
+SM_INSTALLPRINTER=Le pilote d’imprimante n’est pas installé ou le port de l’imprimante n’est pas de type USB ou réseau.
+GUIDE_ERROR=Manuel de l’utilisateur introuvable
+USB Printer is not found. Please add the printer=Imprimante USB introuvable. Veuillez ajouter l'imprimante
+Printer driver is not installed, please install the driver...=Le pilote d'imprimante n'est pas installé, veuillez l'installer...
+No Active Window. Please select a window and press the button again.=Pas de fenêtre active. Veuillez sélectionner une fenêtre et appuyer une nouvelle fois sur le bouton.
+
+[Option]
+SM_OPT_CAPTION=Options
+SM_OPT_TITLE=Option d'alerte du Smart Panel
+SM_OPT_CHECK_FINISH=Afficher un message lorsque la tâche est terminée sur l'imprimante réseau
+SM_OPT_CHECK_ERROR=Affichage lorsque l’imprimante ne peut pas imprimer (par exemple, papier épuisé)
+SM_OPT_CHECK_WAIT=Affiche l’imprimante en attente qui n’a pas de problème (par ex. préchauffage)
+SM_OPT_CHECK_JOBMONITOR=Lancer le moniteur des tâches lorsque la tâche est enregistrée sur l'imprimante
+SM_OPT_INTERVAL=Programmer une vérification automatique de l'état toutes les
+SM_OPT_STYLE=Afficher sous forme de
+SM_OPT_BALLOON=Info-bulles
+SM_OPT_PANEL=Fenêtre locale (Smart Panel)
+SM_OPT_SEC=(1-10 s)
+SM_OPT_OK=OK
+SM_OPT_CANCEL=Annuler
+SM_OPT_SHOW=Afficher le message d’état d’impression
+

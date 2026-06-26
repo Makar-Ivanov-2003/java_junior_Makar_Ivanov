@@ -1,0 +1,307 @@
+; Copyright 2009 Samsung. ALL right reserved.
+
+[Version]
+Signature="$Windows NT$"
+Class=Printer
+Provider=%PROVIDER%
+CatalogFile = sse1m.cat
+DriverVer=07/31/2009, 3.04.95
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318}
+
+;
+; The Manufacturer section lists all of the manufacturers that we will
+; display in the Dialog box
+
+[Manufacturer]
+%PROVIDER% = MODEL, ntamd64
+
+; Model section for Windows 2000 and XP
+[MODEL.ntamd64]
+"Samsung SCX-4300 Series" = DRVINSTALL, LPTENUM\SamsungSCX-4300_Seri1721
+"Samsung SCX-4300 Series" = DRVINSTALL, USBPRINT\SamsungSCX-4300_Seri1721
+
+[OEM URLS]
+%PROVIDER% = "http://www.samsungelectronics.com/printer/support/index.html"
+
+;
+; Installer Sections
+;
+; These sections control file installation, and reference all files that
+; need to be copied. If the section name will be assumed to be the driver
+; file, unless there is an explicit DriverFile section listed.
+;
+
+; Installation section for Win2000 and XP
+[DRVINSTALL]
+CopyFiles=DRVFILES,LANGMONFILES,COINSTFILES,PRPROCFILES
+DataSection=DRVCONFIG
+DataFile=sse1mpp.dll
+
+;
+; Data Sections
+;
+; These sections contain data that is shared between devices.
+;
+[DRVCONFIG]
+DriverFile=sse1m.dll
+ConfigFile=sse1mdu.dll
+LanguageMonitor="SSE1M Langmon,sse1ml6.dll"
+PrintProcessor="SSE1MPC,sse1mpc.dll"
+
+[DRVINSTALL.CoInstallers] 
+AddReg=COINST.AddReg 
+CopyFiles=COINSTFILES
+
+[COINST.AddReg]
+HKR,,CoInstallers32,0x10000,"sse1mci.dll,CoDeviceInstall"
+
+;------------------------------------------------------
+
+; Copy Sections
+;
+; Lists of files that are actually copied. These sections are referenced
+; from the installer sections, above. Only create a section if it contains
+; two or more files (if we only copy a single file, identify it in the
+; installer section, using the @filename notation)
+;
+[LANGMONFILES]
+sse1ml6.dll
+sse1ml6.smt
+
+[PRPROCFILES]
+sse1mpc.dll,  itdrvpc.dll
+
+[COINSTFILES] 
+sse1mci.dll,  coinst.dll
+sse1mci.exe,  coinst.exe
+
+[DRVFILES]
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Driver Core files and DLLs and Other files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sse1m.dll,    itdrv.dll
+sse1mdu.dll,  itdrvdu.dll
+sse1mpp.dll,  itdrvpp.dll
+sse1mu.dll,   itdrvu.dll
+sse1mu2.dll,  itdrvu2.dll
+sse1mo.dll,   itdrvo.dll
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; FrameBuffer files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sse1mcm.dll,  itdrvcm.dll
+sse1mlf.dll,  itdrvlf.dll
+sse1mum.dll,  itdrvum.dll
+sse1mum.xml,  itdrvum.xml
+sse1mcm.ctd,  itdrvcm.ctd
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Manual Duplex files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Model specific script files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sse1mpp.ver
+sse1mu.ini
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Bmp files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sse1mua.bmp,  itdrvua.bmp
+sse1mub.bmp,  itdrvub.bmp
+sse1mul.bmp,  itdrvul.bmp
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Color bitmap
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Model dependent bitmap
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sse1mu.bmp
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; SNMP files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Dat files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sse1mbp.dat,  itdrvbp.dat
+sse1mcp.dat,  itdrvcp.dat
+sse1mct.dat,  itdrvct.dat
+sse1mcz.dat,  itdrvcz.dat
+sse1mdn.dat,  itdrvdn.dat
+sse1mdt.dat,  itdrvdt.dat
+sse1mel.dat,  itdrvel.dat
+sse1men.dat,  itdrven.dat
+sse1mfi.dat,  itdrvfi.dat
+sse1mfn.dat,  itdrvfn.dat
+sse1mgr.dat,  itdrvgr.dat
+sse1mhu.dat,  itdrvhu.dat
+sse1mit.dat,  itdrvit.dat
+sse1mkr.dat,  itdrvkr.dat
+sse1mnr.dat,  itdrvnr.dat
+sse1mpo.dat,  itdrvpo.dat
+sse1mpt.dat,  itdrvpt.dat
+sse1mru.dat,  itdrvru.dat
+sse1msp.dat,  itdrvsp.dat
+sse1msw.dat,  itdrvsw.dat
+sse1mtk.dat,  itdrvtk.dat
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Help files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sse1mbp.chm,  itdrvbp.chm
+sse1mcp.chm,  itdrvcp.chm
+sse1mct.chm,  itdrvct.chm
+sse1mcz.chm,  itdrvcz.chm
+sse1mdn.chm,  itdrvdn.chm
+sse1mdt.chm,  itdrvdt.chm
+sse1mel.chm,  itdrvel.chm
+sse1men.chm,  itdrven.chm
+sse1mfi.chm,  itdrvfi.chm
+sse1mfn.chm,  itdrvfn.chm
+sse1mgr.chm,  itdrvgr.chm
+sse1mhu.chm,  itdrvhu.chm
+sse1mit.chm,  itdrvit.chm
+sse1mkr.chm,  itdrvkr.chm
+sse1mnr.chm,  itdrvnr.chm
+sse1mpo.chm,  itdrvpo.chm
+sse1mpt.chm,  itdrvpt.chm
+sse1mru.chm,  itdrvru.chm
+sse1msp.chm,  itdrvsp.chm
+sse1msw.chm,  itdrvsw.chm
+sse1mtk.chm,  itdrvtk.chm
+
+;
+; Color profiles go to the colors directory.  All other files to the the
+; system directory
+;
+
+[DestinationDirs]
+DefaultDestDir=66000
+LANGMONFILES=66002
+COINSTFILES = 66002
+PRPROCFILES=66001
+
+[SourceDisksNames]
+1 = %DISK_NAME%,,,
+
+[SourceDisksFiles]
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Driver Core files and DLLs and Other files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrv.dll       = 1
+itdrvdu.dll     = 1
+itdrvpp.dll     = 1
+itdrvu.dll      = 1
+itdrvu2.dll     = 1
+itdrvo.dll      = 1
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; FrameBuffer files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvcm.dll     = 1
+itdrvlf.dll     = 1
+itdrvum.dll     = 1
+itdrvum.xml     = 1
+itdrvcm.ctd     = 1
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Manual Duplex files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Model specific script files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sse1mu.ini      = 1
+sse1mpp.ver     = 1
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Bmp files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvua.bmp     = 1
+itdrvub.bmp     = 1
+itdrvul.bmp     = 1
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Color bitmap
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Model dependent bitmap
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sse1mu.bmp      = 1
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; SNMP files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Dat files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvbp.dat 	= 1
+itdrvcp.dat 	= 1
+itdrvct.dat 	= 1
+itdrvcz.dat 	= 1
+itdrvdn.dat 	= 1
+itdrvdt.dat 	= 1
+itdrvel.dat 	= 1
+itdrven.dat 	= 1
+itdrvfi.dat 	= 1
+itdrvfn.dat 	= 1
+itdrvgr.dat 	= 1
+itdrvhu.dat 	= 1
+itdrvit.dat 	= 1
+itdrvkr.dat 	= 1
+itdrvnr.dat 	= 1
+itdrvpo.dat 	= 1
+itdrvpt.dat 	= 1
+itdrvru.dat 	= 1
+itdrvsp.dat 	= 1
+itdrvsw.dat 	= 1
+itdrvtk.dat 	= 1
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Help files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvbp.chm 	= 1
+itdrvcp.chm 	= 1
+itdrvct.chm 	= 1
+itdrvcz.chm 	= 1
+itdrvdn.chm 	= 1
+itdrvdt.chm 	= 1
+itdrvel.chm 	= 1
+itdrven.chm 	= 1
+itdrvfi.chm 	= 1
+itdrvfn.chm 	= 1
+itdrvgr.chm 	= 1
+itdrvhu.chm 	= 1
+itdrvit.chm 	= 1
+itdrvkr.chm 	= 1
+itdrvnr.chm 	= 1
+itdrvpo.chm 	= 1
+itdrvpt.chm 	= 1
+itdrvru.chm 	= 1
+itdrvsp.chm 	= 1
+itdrvsw.chm 	= 1
+itdrvtk.chm 	= 1
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; COINSTFILES
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+coinst.dll      = 1 
+coinst.exe      = 1 
+ 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; LANGMONFILES
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+sse1ml6.dll     = 1
+sse1ml6.smt     = 1
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; PRPROCFILES
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvpc.dll     = 1
+
+[Strings]
+PROVIDER = "Samsung"
+DISK_NAME = "Samsung Printer Driver Installation CD"
+

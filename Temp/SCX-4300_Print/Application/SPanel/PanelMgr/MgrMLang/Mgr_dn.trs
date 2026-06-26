@@ -1,0 +1,42 @@
+[Menu]
+MANUAL=Br'ugerhåndbog
+MGR_OPEN=Smart Panel
+MGR_EXIT=Afslut 
+MGR_SETTING=Indstillinger 
+MGR_JOBMONITOR=Jobovervågning 
+MGR_DRV_SETTING=Driverindstilling
+MGR_PRN_SETTING=Printerindstilling
+MGR_BUYNOW=Køb nu
+MGR_GUIDE=Fejlfindingsguide
+MGR_ERR_TOOLTIP=Ingen understøttet printerdriver eller port
+MGR_SCAN_MANAGER=Scannings- og faxhåndtering
+
+[Msg]
+OK_BUTTON=OK
+BUSY_ERR_TITLE=Printeren er optaget 
+BUSY_ERR_MSG=Printerindstillingen er tilgængelig, når printeren er ledig
+FATAL_ERR_TITLE= Fejl
+FATAL_ERR_MSG= Installer understøttet driver eller port
+INITIAL_MSG=Vent et øjeblik...
+SM_OTHERPORT=En anden printer overvåges allerede.
+SM_INSTALLPRINTER=Printerdriveren er ikke installeret, eller printerporten er ikke en USB- eller netværksport.
+GUIDE_ERROR=Brugervejledningen blev ikke fundet
+USB Printer is not found. Please add the printer=USB-printeren blev ikke fundet. Tilføj printeren
+Printer driver is not installed, please install the driver...=Printerdriveren er ikke installeret. Installer driveren...
+No Active Window. Please select a window and press the button again.=Intet aktivt vindue. Vælg et vindue, og tryk på knappen igen.
+
+[Option]
+SM_OPT_CAPTION=Indstillinger
+SM_OPT_TITLE=Smart Panel - alarmindstilling
+SM_OPT_CHECK_FINISH=Vis, når jobbet er afsluttet for netværksprinter
+SM_OPT_CHECK_ERROR=Displayet, når printeren ikke kanudskrive (f.eks. når den mangler papir)
+SM_OPT_CHECK_WAIT=Displayet, når printeren venter (f.eks. varmer op)
+SM_OPT_CHECK_JOBMONITOR=Start jobovervågning, når jobbet gemmes i printeren
+SM_OPT_INTERVAL=Planlæg en automatisk statuskontrol hver
+SM_OPT_STYLE=Vis med
+SM_OPT_BALLOON=Boble
+SM_OPT_PANEL=Popup-vindue (Smart Panel)
+SM_OPT_SEC=(1-10 sek.)
+SM_OPT_OK=OK
+SM_OPT_CANCEL=Annuller
+SM_OPT_SHOW=Vis udskriftstatusmeddelelse
